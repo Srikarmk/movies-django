@@ -18,6 +18,9 @@ from django.urls import path
 from movies import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.movies),
-    path('homepage',views.homepage)
+    path('movies/',views.movies),
+    path('homepage',views.homepage),
+    path('movies/<int:id>',views.detail),
+    path('movies/add',views.add),
+    path('movies/delete/<int:id>',views.delete)
 ]

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a movie!</title>
+  </head>
+  <body >
+    <form action="/movies/add" method="post">
+      {% csrf_token %}
+      <div></div>
+      <label for="title">Movie Title</label>
+      <input 
+        type="text"
+        placeholder="Movie title"
+        id="title"
+        name="title"
+      /><br />
+    </div>
+      <div style="padding: 20px 0px;">
+      <label for="year">year</label>
+      <input type="text" placeholder="year" id="year" name="year" /><br />
+    </div>
+      <input type="submit" value="Add" />
+    </form>
+  </body>
+</html>
